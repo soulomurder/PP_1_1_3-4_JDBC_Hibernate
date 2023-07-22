@@ -20,7 +20,7 @@ public class Util {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/myscheme", "root", "GlowStone:89");
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return connection;
     }

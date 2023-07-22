@@ -9,13 +9,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    UserDao userDao = new UserDaoHibernateImpl();
-    //UserDao userDao = new UserDaoJDBCImpl();
+//    UserDao userDao = new UserDaoHibernateImpl();
+    UserDao userDao = new UserDaoJDBCImpl();
     public void createUsersTable() {
         try {
             userDao.createUsersTable();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
