@@ -17,6 +17,7 @@ public class UserServiceImpl implements UserService {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        // 2. потому что в интерфейсе UserDao только у метода создания таблицы в сигнатуре есть throws SQLException
     }
 
     public void dropUsersTable() {

@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class Util {
+public class Util {// 4. в каком запросе?
     private static Connection connection;
     private static SessionFactory sessionFactory;
     public static Connection getConnection() {
@@ -20,7 +20,7 @@ public class Util {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/myscheme", "root", "GlowStone:89");
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return connection;
     }
